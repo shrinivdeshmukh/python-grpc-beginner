@@ -34,7 +34,6 @@ books_by_category = {
     ],
 }
 
-
 class RecommendationService(recommendations_pb2_grpc.RecommendationsServicer):
     def Recommend(self, request, context):
         if request.category not in books_by_category:
